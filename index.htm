@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<link rel="apple-touch-icon" sizes="57x57" href="/img/57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="/img/60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="/img/72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="/img/76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="/img/114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="/img/120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="/img/144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="/img/152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="/img/180.png">
+		<meta name="apple-mobile-web-app-title" content="LW">
+		<meta name="application-name" content="LW">
+		<title>LW</title>
+
+		<!-- CDN Framework7 css //-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/framework7/1.4.2/css/framework7.ios.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/framework7/1.4.2/css/framework7.ios.colors.min.css">
+
+		<!-- CDN Weather font css //-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons-wind.min.css">
+
+		<!-- CSS //-->
+		<link rel="stylesheet" href="/css/style.css">
+
+	</head>
+	<body class="layout-dark">
+		<div class="statusbar-overlay"></div>
+		<div class="panel-overlay"></div>
+		<div class="views tabs toolbar-fixed">
+			<div id="outside" class="view tab active">
+				<div class="navbar">
+					<div class="navbar-inner">
+						<div class="center">На улице</div>
+					</div>
+				</div>
+				<div class="pages navbar-fixed">
+					<div class="page">
+						<div class="page-content pull-to-refresh-content home-refresh" data-ptr-distance="55">
+							<div class="pull-to-refresh-layer">
+								<div class="preloader"></div>
+								<div class="pull-to-refresh-arrow"></div>
+							</div>
+							<div class="content-block">
+								<div id="w__street_temp" class="card">
+									<div class="card-header">Температура</div>
+									<div class="card-content">
+										<div class="card-content-inner">
+											<div class="epie">
+												<span></span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div id="w__street_hum" class="card">
+									<div class="card-header">Влажность</div>
+									<div class="card-content">
+										<div class="card-content-inner">
+											<div class="epie">
+												<span></span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div id="w__current" class="card">
+									<div class="card-header">Сейчас</div>
+									<div class="card-content">
+										<div class="weather_block">
+											<div class="row no-gutter">
+												<div class="weather_icon col-40"></div>
+												<div class="col-60">
+													<div class="row">
+														<div class="col-50 weather_temp"></div>
+														<div class="col-50 weather_wind"></div>
+													</div>
+													<div class="row weather_data">
+														<div class="col-60">
+															Ветер:<br>
+															Давление:<br>
+															Влажность:
+														</div>
+														<div class="col-40">
+															<div class="weather_ws"></div>
+															<div class="weather_pres"></div>
+															<div class="weather_hum"></div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div id="w__forecast" class="card">
+									<div class="card-header">Прогноз</div>
+									<div class="card-content">
+										<div class="weather_block template">
+											<div class="content-block-title title"></div>
+											<div class="content-block">
+												<div class="row no-gutter">
+												<div class="weather_icon col-40"></div>
+												<div class="col-60">
+													<div class="row">
+														<div class="col-50 weather_temp"></div>
+														<div class="col-50 weather_wind"></div>
+													</div>
+													<div class="row weather_data">
+														<div class="col-60">
+															Ветер:<br>
+															Давление:<br>
+															Влажность:
+														</div>
+														<div class="col-40">
+															<div class="weather_ws"></div>
+															<div class="weather_pres"></div>
+															<div class="weather_hum"></div>
+														</div>
+													</div>
+												</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="inside" class="view tab">
+				<div class="navbar">
+					<div class="navbar-inner">
+						<div class="center">В доме</div>
+					</div>
+				</div>
+				<div class="pages navbar-fixed">
+					<div class="page">
+						<div class="page-content pull-to-refresh-content home-refresh" data-ptr-distance="55">
+							<div class="pull-to-refresh-layer">
+								<div class="preloader"></div>
+								<div class="pull-to-refresh-arrow"></div>
+							</div>
+							<div class="content-block">
+								<div id="w__home_temp" class="card">
+									<div class="card-header">Температура</div>
+									<div class="card-content">
+										<div class="card-content-inner">
+											<div class="epie">
+												<span></span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div id="w__home_hum" class="card">
+									<div class="card-header">Влажность</div>
+									<div class="card-content">
+										<div class="card-content-inner">
+											<div class="epie">
+												<span></span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="toolbar tabbar">
+				<div class="toolbar-inner">
+					<a href="#outside" class="tab-link active">
+						<i class="icon outside"></i>
+					</a>
+					<a href="#inside" class="tab-link">
+						<i class="icon inside"></i>
+					</a>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/framework7/1.4.2/js/framework7.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/easy-pie-chart/2.1.6/easypiechart.min.js"></script>
+		<script type="text/javascript" src="/js/dF.js"></script>
+		<script type="text/javascript" src="/js/main.js"></script>
+	</body>
+</html>
